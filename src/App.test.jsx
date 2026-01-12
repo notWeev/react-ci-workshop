@@ -13,4 +13,9 @@ describe("App", () => {
     const button = screen.getByRole("button");
     expect(button).toBeInTheDocument();
   });
+
+  it("has custom title", () => {
+    render(<App />);
+    expect(screen.getByText(/Moja Aplikacja React/i)).toBeInTheDocument();
+  });
 });
